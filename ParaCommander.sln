@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParaCommander", "ParaCommander\ParaCommander.csproj", "{99DD2580-F4F2-48DC-92AC-58970F4DF5B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Root", ".Root", "{A9CC6FAE-4739-410A-8205-DBCD43D0416A}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+		LICENSE = LICENSE
+		stylecop.json = stylecop.json
+		.github\workflows\packaging.yml = .github\workflows\packaging.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParaCommander.Desktop", "ParaCommander.Desktop\ParaCommander.Desktop.csproj", "{1BC23A9E-80CE-4811-8669-B33541D179FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99DD2580-F4F2-48DC-92AC-58970F4DF5B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99DD2580-F4F2-48DC-92AC-58970F4DF5B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99DD2580-F4F2-48DC-92AC-58970F4DF5B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99DD2580-F4F2-48DC-92AC-58970F4DF5B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BC23A9E-80CE-4811-8669-B33541D179FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BC23A9E-80CE-4811-8669-B33541D179FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BC23A9E-80CE-4811-8669-B33541D179FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BC23A9E-80CE-4811-8669-B33541D179FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

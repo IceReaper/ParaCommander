@@ -1,0 +1,8 @@
+{
+  "settings": {
+    "documentationRules": {
+      "copyrightText": "Copyright (c) the ParaCommander developers.\nThis file is part of ParaCommander which is free software.\nIt is made available to you under the terms of the MIT License.\nFor more information, see LICENSE.",
+      "xmlHeader": false
+    }
+  }
+}

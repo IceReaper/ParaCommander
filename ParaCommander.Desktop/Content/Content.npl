@@ -1,0 +1,38 @@
+{
+    "root": "../../ParaCommander/Content/",
+    "content":
+    {
+        "Images":
+        {
+            "path": "*.png",
+            "recursive": "True",
+            "action": "build",
+            "importer": "TextureImporter",
+            "processor": "TextureProcessor"
+        },
+         "Sounds":
+         {
+             "path": "*.wav",
+             "recursive": "True",
+             "action": "build",
+             "importer": "WavImporter",
+             "processor": "SoundEffectProcessor"
+         },
+         "Fonts":
+         {
+             "path": "*.spritefont",
+             "recursive": "True",
+             "action": "build",
+             "importer": "FontDescriptionImporter",
+             "processor": "FontDescriptionProcessor"
+         },
+          "Effects":
+          {
+              "path": "*.fx",
+              "recursive": "True",
+              "action": "build",
+              "importer": "EffectImporter",
+              "processor": "EffectProcessor"
+          }
+    }
+}

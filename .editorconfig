@@ -1,0 +1,40 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+max_line_length = off
+
+dotnet_diagnostic.CA1031.severity = none # Do not catch general exception types
+dotnet_diagnostic.CA1062.severity = none # Validate arguments of public methods
+dotnet_diagnostic.CA2000.severity = none # Dispose objects before losing scope
+dotnet_diagnostic.CA2213.severity = none # Disposable fields should be disposed
+dotnet_diagnostic.CA5394.severity = none # Do not use insecure randomness
+
+resharper_instance_members_qualify_members = all
+resharper_add_imports_to_deepest_scope = true
+resharper_arrange_redundant_parentheses_highlighting = do_not_show
+
+dotnet_naming_style.lower_camel_case_style.capitalization=camel_case
+dotnet_naming_style.upper_camel_case_style.capitalization = pascal_case
+
+dotnet_naming_symbols.private_constants_symbols.applicable_accessibilities = private
+dotnet_naming_symbols.private_constants_symbols.applicable_kinds = field
+dotnet_naming_symbols.private_constants_symbols.required_modifiers = const
+dotnet_naming_symbols.private_instance_fields_symbols.applicable_accessibilities=private
+dotnet_naming_symbols.private_instance_fields_symbols.applicable_kinds=field
+dotnet_naming_symbols.private_instance_fields_symbols.required_modifiers =
+dotnet_naming_symbols.private_static_readonly_symbols.applicable_kinds = field
+dotnet_naming_symbols.private_static_readonly_symbols.required_modifiers = readonly,static
+
+dotnet_naming_rule.private_constants_rule.severity = warning
+dotnet_naming_rule.private_constants_rule.style = upper_camel_case_style
+dotnet_naming_rule.private_constants_rule.symbols = private_constants_symbols
+dotnet_naming_rule.private_instance_fields_rule.severity = error
+dotnet_naming_rule.private_instance_fields_rule.style = lower_camel_case_style
+dotnet_naming_rule.private_instance_fields_rule.symbols = private_instance_fields_symbols
+dotnet_naming_rule.private_static_readonly_rule.severity = warning
+dotnet_naming_rule.private_static_readonly_rule.style = upper_camel_case_style
+dotnet_naming_rule.private_static_readonly_rule.symbols = private_static_readonly_symbols

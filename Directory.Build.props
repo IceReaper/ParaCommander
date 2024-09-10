@@ -1,0 +1,33 @@
+<Project>
+
+    <PropertyGroup>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <TargetFramework>net8.0</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <AnalysisLevel>latest-All</AnalysisLevel>
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <TrimmerSingleWarn>false</TrimmerSingleWarn>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)'=='Release'">
+        <NoWarn>SA1633</NoWarn>
+        <DebugSymbols>False</DebugSymbols>
+        <DebugType>None</DebugType>
+        <PublishDocumentationFiles>false</PublishDocumentationFiles>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="GitInfo" />
+        <PackageReference Include="StyleCop.Analyzers" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <AdditionalFiles Include="$(SolutionDir)stylecop.json" />
+    </ItemGroup>
+
+</Project>

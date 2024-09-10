@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <AssemblyName>ParaCommander.Core</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MLEM.Ui" />
+        <PackageReference Include="MonoGame.Framework.DesktopGL" PrivateAssets="all" />
+    </ItemGroup>
+
+</Project>

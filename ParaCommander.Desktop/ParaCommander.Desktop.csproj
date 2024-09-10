@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>exe</OutputType>
+        <ApplicationIcon>icon.ico</ApplicationIcon>
+        <AssemblyName>ParaCommander</AssemblyName>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <PublishSingleFile>true</PublishSingleFile>
+        <SelfContained>true</SelfContained>
+        <PublishReadyToRun>true</PublishReadyToRun>
+        <PublishTrimmed>true</PublishTrimmed>
+        <ILLinkTreatWarningsAsErrors>false</ILLinkTreatWarningsAsErrors>
+        <OutputType Condition="'$(RuntimeIdentifier)' == 'win-x64' OR '$(RuntimeIdentifier)' == 'win-arm64'">WinExe</OutputType>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\ParaCommander\ParaCommander.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MonoGame.Content.Builder.Task" />
+        <PackageReference Include="MonoGame.Framework.DesktopGL" />
+        <PackageReference Include="Nopipeline.Task" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <TrimmerRootAssembly Include="MonoGame.Framework" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="Icon.bmp" LogicalName="Icon.bmp" />
+    </ItemGroup>
+
+</Project>

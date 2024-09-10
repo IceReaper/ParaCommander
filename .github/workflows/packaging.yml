@@ -1,0 +1,30 @@
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  deploy:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+      - run: dotnet build -c Release
+      - run: dotnet publish ${{ github.event.repository.name }}.Desktop -r win-x64     -o ./publish-win-x64
+      - run: dotnet publish ${{ github.event.repository.name }}.Desktop -r win-arm64   -o ./publish-win-arm64
+      - run: dotnet publish ${{ github.event.repository.name }}.Desktop -r linux-x64   -o ./publish-linux-x64
+      - run: dotnet publish ${{ github.event.repository.name }}.Desktop -r linux-arm64 -o ./publish-linux-arm64
+      - run: dotnet publish ${{ github.event.repository.name }}.Desktop -r osx-x64     -o ./publish-osx-x64
+      - run: dotnet publish ${{ github.event.repository.name }}.Desktop -r osx-arm64   -o ./publish-osx-arm64
+      - run: Compress-Archive -Destination ${{ github.event.repository.name }}-win-x64.zip     -Path publish-win-x64\*
+      - run: Compress-Archive -Destination ${{ github.event.repository.name }}-win-arm64.zip   -Path publish-win-arm64\*
+      - run: Compress-Archive -Destination ${{ github.event.repository.name }}-linux-x64.zip   -Path publish-linux-x64\*
+      - run: Compress-Archive -Destination ${{ github.event.repository.name }}-linux-arm64.zip -Path publish-linux-arm64\*
+      - run: Compress-Archive -Destination ${{ github.event.repository.name }}-osx-x64.zip     -Path publish-osx-x64\*
+      - run: Compress-Archive -Destination ${{ github.event.repository.name }}-osx-arm64.zip   -Path publish-osx-arm64\*
+      - uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref }}
+          file_glob: true
+          file: "*.zip"

@@ -1,0 +1,17 @@
+<Project>
+
+    <PropertyGroup>
+        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageVersion Include="GitInfo" Version="3.3.5" />
+        <PackageVersion Include="MLEM.Ui" Version="7.1.0" />
+        <PackageVersion Include="MonoGame.Content.Builder.Task" Version="3.8.2.1105" />
+        <PackageVersion Include="MonoGame.Framework.DesktopGL" Version="3.8.2.1105" />
+        <PackageVersion Include="Nopipeline.Task" Version="2.2.0" />
+        <PackageVersion Include="SixLabors.ImageSharp" Version="3.1.5" />
+        <PackageVersion Include="StyleCop.Analyzers" Version="1.2.0-beta.556" />
+    </ItemGroup>
+
+</Project>
